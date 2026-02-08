@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KO Interior Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Add Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    // Initialize Lucide icons when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+    });
+  </script>
+  <style>
+    .font-montserrat {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Mobile Hero Image Optimization */
+    @media (max-width: 1023px) {
+      .hero-mobile {
+        background-attachment: scroll !important;
+        background-position: center center !important;
+        background-size: cover !important;
+      }
+    }
+    
+    /* Custom Animations for Hero Section */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slide-up {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+    
+    .animate-slide-up {
+      animation: slide-up 1s ease-out forwards;
+      opacity: 0;
+    }
+    
+    /* Enhanced hover effects */
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Gradient text animation */
+    .gradient-text {
+      background: linear-gradient(45deg, #A28366, #B89580, #A28366);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient-shift 3s ease-in-out infinite;
+    }
+    
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 m-0 p-0 ">
+  
+
+  <!-- Main Navbar -->
+  <header class="bg-white w-full border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-7 py-4 relative">
+      <!-- Logo (left) -->
+      <div class="flex items-center space-x-4">
+        <img src="images/logo.webp" alt="K Logo" class="h-10 w-auto min-w-[40px] md:h-14" />
+        <img src="images/logo-extend.png" alt="KO Interior Studio" class="h-10  w-auto min-w-[10px] md:h-14" />
+      </div>
+      <!-- Desktop Nav (center/right) -->
+      <nav class="hidden md:flex items-center space-x-6 ml-8 flex-1 justify-end font-montserrat">
+        <a href="index.html" class="text-gray-800 font-semibold text-sm tracking-wider hover:text-[#A28366] transition uppercase">HOME</a>
+        <a href="aboutus.html" class="text-gray-800 font-semibold text-sm tracking-wider hover:text-[#A28366] transition uppercase">ABOUT</a>
+        <a href="portfolio.html" class="text-gray-800 font-semibold text-sm tracking-wider hover:text-[#A28366] transition uppercase">PROJECTS</a>
+        <a href="contact.html" class="text-gray-800 font-semibold text-sm tracking-wider hover:text-[#A28366] transition uppercase">CONTACT</a>
+      </nav>
+      <!-- Hamburger Icon for Mobile (right) -->
+      <button id="mobile-menu-button" class="md:hidden flex items-center px-2 py-2 text-[#A28366] focus:outline-none z-20 ml-2">
+        <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="fixed inset-0 bg-white bg-opacity-95 z-30 flex flex-col items-center justify-center space-y-8 text-center transition-all duration-300 opacity-0 pointer-events-none md:hidden font-montserrat">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-800">
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <a href="index.html" class="text-gray-800 font-semibold text-xl tracking-wider hover:text-[#A28366] transition uppercase">HOME</a>
+        <a href="aboutus.html" class="text-gray-800 font-semibold text-xl tracking-wider hover:text-[#A28366] transition uppercase">ABOUT</a>
+        <a href="portfolio.html" class="text-gray-800 font-semibold text-xl tracking-wider hover:text-[#A28366] transition uppercase">PROJECTS</a>
+        <a href="contact.html" class="text-gray-800 font-semibold text-xl tracking-wider hover:text-[#A28366] transition uppercase">CONTACT</a>
+      </div>
+    </div>
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-mobile-menu');
+        menuBtn.addEventListener('click', () => {
+          menu.classList.remove('opacity-0', 'pointer-events-none');
+          menu.classList.add('opacity-100');
+        });
+        closeBtn.addEventListener('click', () => {
+          menu.classList.add('opacity-0', 'pointer-events-none');
+          menu.classList.remove('opacity-100');
+        });
+      });
+    </script>
+    
+    <!-- Text changing animation script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const changingText = document.getElementById('changing-text');
+        const words = ['Elegance', 'Beauty', 'Sophistication', 'Luxury', 'Style', 'Perfection'];
+        let currentIndex = 0;
+
+        function changeText() {
+          // Add fade out effect
+          changingText.style.opacity = '0';
+          changingText.style.transform = 'translateY(10px)';
+          
+          setTimeout(() => {
+            // Change the text
+            currentIndex = (currentIndex + 1) % words.length;
+            changingText.textContent = words[currentIndex];
+            
+            // Add fade in effect
+            changingText.style.opacity = '1';
+            changingText.style.transform = 'translateY(0)';
+          }, 300);
+        }
+
+        // Add CSS transitions
+        changingText.style.transition = 'all 0.3s ease-in-out';
+        
+        // Start the animation after 2 seconds and repeat every 2 seconds
+        setTimeout(() => {
+          setInterval(changeText, 2000);
+        }, 2000);
+      });
+    </script>
+  </header>
+
+  <!-- Hero Section with background image -->
+  <div class="hero-mobile w-full h-[40vh] md:h-screen pt-28 bg-cover bg-center bg-[url('images/bg_img.png')] min-h-[25vh] md:min-h-[60vh] relative overflow-hidden" style="background-image: url('images/bg_img.png'); background-size: cover; background-position: center; background-attachment: scroll;">
+    <!-- Enhanced Background Overlay with Gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70"></div>
+    
+    <!-- Animated Background Elements -->
+    <!-- <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full animate-pulse" style="animation-delay: 0s;"></div>
+      <div class="absolute top-3/4 right-1/4 w-24 h-24 bg-[#A28366]/10 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+      <div class="absolute bottom-1/4 left-1/3 w-16 h-16 bg-white/5 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+    </div> -->
+    
+        <!-- Hero Content Overlay - Desktop/Laptop Only -->
+    <div class="hidden lg:flex absolute inset-0 items-center justify-center">
+      <div class="text-center text-white px-4 relative z-10">
+        <!-- Decorative Line Above -->
+        <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#A28366] to-transparent mx-auto mb-8 animate-fade-in"></div>
+        
+        <!-- Main Headline with Enhanced Typography -->
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-playfair mb-4 tracking-wide leading-tight animate-slide-up drop-shadow-2xl">
+          <span class="block text-white/90 drop-shadow-lg">Designs That</span>
+          <span class="block bg-gradient-to-r from-white via-[#A28366] to-white bg-clip-text text-transparent font-bold drop-shadow-lg">Reflect You</span>
+        </h1>
+        
+        <!-- Subtitle with Elegant Styling -->
+        <h2 class="text-2xl md:text-4xl lg:text-5xl font-playfair mb-8 tracking-wide leading-relaxed animate-slide-up drop-shadow-lg" style="animation-delay: 0.2s;">
+          <span class="text-white/80 drop-shadow-md">Spaces That</span>
+          <span class="block text-[#A28366] font-semibold italic drop-shadow-md">Uplift You</span>
+        </h2>
+        
+        <!-- Decorative Elements -->
+        <div class="flex items-center justify-center space-x-4 mb-8 animate-fade-in" style="animation-delay: 0.4s;">
+          <div class="w-8 h-px bg-gradient-to-r from-transparent to-[#A28366] animate-pulse"></div>
+          <div class="w-2 h-2 bg-[#A28366] rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
+          <div class="w-8 h-px bg-gradient-to-l from-transparent to-[#A28366] animate-pulse"></div>
+        </div>
+        
+        <!-- Enhanced CTA Button -->
+        <div class="animate-slide-up" style="animation-delay: 0.6s;">
+          <a href="contact.html" class="group inline-flex items-center space-x-3 bg-gradient-to-r from-[#A28366] to-[#B89580] hover:from-[#8b6f4a] hover:to-[#A28366] text-white font-semibold py-4 px-8 text-lg md:text-xl rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-2xl shadow-lg">
+            <span>Connect With Us</span>
+            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Decorative Line Below -->
+        <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#A28366] to-transparent mx-auto mt-8 animate-fade-in" style="animation-delay: 0.8s;"></div>
+      </div>
+    </div>
+    
+    <!-- Mobile Hero Content - Hidden (No overlay text on mobile) -->
+    <div class="lg:hidden absolute inset-0 flex items-center justify-center opacity-0">
+      <!-- Mobile content is hidden - keeping original mobile behavior -->
+    </div>
+    
+    <!-- Scroll Indicator - Desktop Only -->
+    <div class="hidden lg:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Stats
+    <div class="fade-in mt-0 py-4 grid grid-cols-3 gap-8 sm:gap-16" style="animation-delay: 0.6s;">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-[#A28366] sm:text-3xl">500+</div>
+        <div class="text-sm text-gray-600">Projects</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-[#A28366] sm:text-3xl">12+</div>
+        <div class="text-sm text-gray-600">Years</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-[#A28366] sm:text-3xl">98%</div>
+        <div class="text-sm text-gray-600">Satisfaction</div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="container mx-auto max-w-7xl px-4">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Content - Left Side on Desktop, Top on Mobile -->
+        <div class="fade-in order-1">
+          <div class="inline-flex items-center rounded-full bg-[#A28366]/10 px-3 py-1 text-sm font-medium text-[#A28366]">
+            <i data-lucide="sparkles" class="mr-2 h-4 w-4"></i>
+            About Our Studio
+          </div>
+          
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Crafting Timeless
+            <br> 
+            <span id="changing-text" class="font-crimson italic text-[#A28366]">Elegance</span>
+          </h2>
+          
+          <div class="mt-8 relative">
+            <!-- Decorative line before text -->
+            <div class="w-16 h-0.5 bg-gradient-to-r from-[#A28366] to-[#B89580] mb-6"></div>
+            
+            <!-- Enhanced paragraph with better typography -->
+            <p class="text-lg text-gray-700 leading-8 font-light tracking-wide">
+              With over a <span class="font-semibold text-[#A28366]">decade of experience</span> in luxury interior design, 
+              we specialize in creating spaces that seamlessly blend 
+              <span class="font-semibold text-[#A28366]">functionality with aesthetic beauty</span>. 
+              Every project is approached with meticulous attention to detail and a deep understanding of our clients' vision.
+            </p>
+            
+            <!-- Decorative elements -->
+            <div class="flex items-center mt-6 space-x-4">
+              <div class="flex space-x-2">
+                <div class="w-2 h-2 bg-[#A28366] rounded-full"></div>
+                <div class="w-2 h-2 bg-[#B89580] rounded-full"></div>
+                <div class="w-2 h-2 bg-[#A28366] rounded-full"></div>
+              </div>
+              <div class="flex-1 h-px bg-gradient-to-r from-[#A28366]/30 to-transparent"></div>
+            </div>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-2 gap-6">
+            <!-- Residential Card -->
+            <div class="group relative overflow-hidden rounded-lg bg-gradient-to-br from-white to-gray-50/80 p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 bg-gradient-to-br from-[#A28366]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              <!-- Icon and Title Row -->
+              <div class="relative flex items-center space-x-2 mb-1">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-gradient-to-br from-[#A28366] to-[#B89580] shadow-sm group-hover:shadow-md transition-all duration-300">
+                  <i data-lucide="home" class="h-4 w-4 text-white"></i>
+                </div>
+                <span class="font-medium text-gray-900 group-hover:text-[#A28366] transition-colors duration-300">Residential</span>
+              </div>
+              
+              <!-- Description -->
+              <div class="relative">
+                <p class="text-sm text-gray-600">Luxury homes & apartments</p>
+              </div>
+            </div>
+            
+            <!-- Commercial Card -->
+            <div class="group relative overflow-hidden rounded-lg bg-gradient-to-br from-white to-gray-50/80 p-4 shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 bg-gradient-to-br from-[#A28366]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              <!-- Icon and Title Row -->
+              <div class="relative flex items-center space-x-2 mb-1">
+                <div class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-gradient-to-br from-[#A28366] to-[#B89580] shadow-sm group-hover:shadow-md transition-all duration-300">
+                  <i data-lucide="building" class="h-4 w-4 text-white"></i>
+                </div>
+                <span class="font-medium text-gray-900 group-hover:text-[#A28366] transition-colors duration-300">Commercial</span>
+              </div>
+              
+              <!-- Description -->
+              <div class="relative">
+                <p class="text-sm text-gray-600">Offices & retail spaces</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image Section - Right Side on Desktop, Bottom on Mobile -->
+        <div class="order-2 flex justify-center lg:justify-end">
+          <img src="images/recent_1.webp" alt="Interior Design" class="rounded-lg shadow-lg w-full max-w-md object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process Section - Vertical Timeline Design -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto max-w-7xl px-4">
+        <!-- Enhanced Header -->
+        <div class="text-center mb-16">
+          <div class="flex items-center justify-center w-full mb-6">
+            <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+            <div class="mx-6 px-6 py-2 bg-white rounded-full shadow-lg">
+              <span class="text-3xl font-playfair text-[#232b3b] tracking-wide">Our Process</span>
+            </div>
+            <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+          </div>
+          <p class="text-gray-600 font-montserrat text-lg max-w-2xl mx-auto leading-relaxed">
+            A systematic approach to transforming your vision into reality with precision and excellence
+          </p>
+        </div>
+        
+        <!-- Vertical Timeline Container -->
+        <div class="relative w-full max-w-4xl mx-auto">
+          <!-- Vertical Timeline Line -->
+          <div class="absolute left-5 md:left-12 top-4 bottom-72 w-0.5 bg-gray-200"></div>
+          
+          <!-- Process Steps -->
+          <div class="space-y-16">
+                      <!-- Step 1: Consultation -->
+          <div class="relative flex items-start">
+            <!-- Timeline Marker -->
+            <div class="absolute left-3.5 md:left-10 w-4 h-4 bg-white border-2 border-[#A28366] rounded-full z-10 mt-2"></div>
+            
+            <!-- Stage Label -->
+            <div class="absolute left-12 md:left-20 bg-gradient-to-r from-[#A28366] to-[#B89580] px-5 py-2 rounded-full shadow-md border border-[#A28366]/20">
+              <span class="text-sm font-semibold text-white tracking-wide uppercase">Step 1</span>
+            </div>
+              
+              <!-- Content Card -->
+              <div class="ml-12 md:ml-16 mt-14 w-full">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 hover:shadow-md transition-shadow duration-300">
+                  <h4 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Consultation & Concept Development</h4>
+                  <div class="space-y-3">
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Conduct a thorough space assessment and gather inspiration</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Develop a customized design concept and mood board</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Tailored to your lifestyle and budget requirements</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Design & Planning -->
+            <div class="relative flex items-start">
+              <!-- Timeline Marker -->
+              <div class="absolute left-3.5 md:left-10 w-4 h-4 bg-white border-2 border-[#A28366] rounded-full z-10 mt-2"></div>
+              
+              <!-- Stage Label -->
+              <div class="absolute left-12 md:left-20 bg-gradient-to-r from-[#A28366] to-[#B89580] px-5 py-2 rounded-full shadow-md border border-[#A28366]/20">
+                <span class="text-sm font-semibold text-white tracking-wide uppercase">Step 2</span>
+              </div>
+              
+              <!-- Content Card -->
+              <div class="ml-12 md:ml-16 mt-14 w-full">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 hover:shadow-md transition-shadow duration-300">
+                  <h4 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Design & Planning</h4>
+                  <div class="space-y-3">
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Create detailed design plans with layout and color schemes</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Select premium materials and finishes</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Plan project timeline with detailed action plan</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Execution -->
+            <div class="relative flex items-start">
+              <!-- Timeline Marker -->
+              <div class="absolute left-3.5 md:left-10 top-2 w-4 h-4 bg-white border-2 border-[#A28366] rounded-full z-10 mt-2"></div>
+              
+              <!-- Stage Label -->
+              <div class="absolute left-12 md:left-20 top-1 bg-gradient-to-r from-[#A28366] to-[#B89580] px-5 py-2 rounded-full shadow-md border border-[#A28366]/20">
+                <span class="text-sm font-semibold text-white tracking-wide uppercase">Step 3</span>
+              </div>
+              
+              <!-- Content Card -->
+              <div class="ml-12 md:ml-16 mt-14 w-full">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8 hover:shadow-md transition-shadow duration-300">
+                  <h4 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">Execution & Styling</h4>
+                  <div class="space-y-3">
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Transform design plans into tangible results</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Enhance space with carefully chosen artifacts</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <svg class="w-5 h-5 text-[#A28366] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <p class="text-gray-600">Achieve desired aesthetic and ambiance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="w-full py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Enhanced Header -->
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center w-full mb-6">
+          <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+          <div class="mx-6 px-6 py-2 bg-white rounded-full shadow-lg">
+            <span class="text-3xl font-playfair text-[#232b3b] tracking-wide">Our Services</span>
+          </div>
+          <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+        </div>
+        <p class="text-gray-600 font-montserrat text-lg max-w-2xl mx-auto leading-relaxed">
+          Comprehensive interior design solutions tailored to your unique vision and lifestyle
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-center">
+        <!-- Design & Planning -->
+        <div class="flex flex-col items-center">
+          <svg width="80" height="80" fill="none" stroke="#7a7262" stroke-width="2" viewBox="0 0 48 48" class="mb-4"><rect x="6" y="6" width="36" height="36" rx="2"/><path d="M6 18h36M18 6v36M30 6v36M6 30h36M12 12l6 6M36 36l-6-6"/><circle cx="12" cy="12" r="1.5"/><circle cx="36" cy="36" r="1.5"/><circle cx="24" cy="24" r="1.5"/></svg>
+          <span class="mt-2 text-xl text-[#232b3b] font-normal font-sans">Design & Planning</span>
+        </div>
+        <!-- Sourcing -->
+        <div class="flex flex-col items-center">
+          <svg width="80" height="80" fill="none" stroke="#7a7262" stroke-width="2" viewBox="0 0 48 48" class="mb-4"><rect x="10" y="18" width="28" height="18" rx="6"/><rect x="14" y="12" width="20" height="10" rx="5"/><path d="M14 36v4M34 36v4"/></svg>
+          <span class="mt-2 text-xl text-[#232b3b] font-normal font-sans">Sourcing</span>
+        </div>
+        <!-- Styling -->
+        <div class="flex flex-col items-center">
+          <svg width="80" height="80" fill="none" stroke="#7a7262" stroke-width="3" viewBox="0 0 48 48" class="mb-4"><rect x="20" y="32" width="16" height="4" rx="1"/><rect x="12" y="36" width="8" height="4" rx="1"/></svg>
+          <span class="mt-2 text-xl text-[#232b3b] font-normal font-sans">Styling</span>
+        </div>
+        <!-- Consultation -->
+        <div class="flex flex-col items-center">
+          <svg width="80" height="80" fill="none" stroke="#7a7262" stroke-width="2" viewBox="0 0 48 48" class="mb-4"><path d="M24 8a10 10 0 0 1 10 10c0 4.5-3.5 8.5-7 12v4a3 3 0 1 1-6 0v-4c-3.5-3.5-7-7.5-7-12A10 10 0 0 1 24 8Z"/><circle cx="24" cy="38" r="2"/></svg>
+          <span class="mt-2 text-xl text-[#232b3b] font-normal font-sans">Consultation</span>
+        </div>
+        <!-- Art-Curation -->
+        <div class="flex flex-col items-center">
+          <svg width="80" height="80" fill="none" stroke="#7a7262" stroke-width="2" viewBox="0 0 48 48" class="mb-4"><rect x="10" y="10" width="28" height="28" rx="2"/><path d="M14 14h20v20H14z"/><path d="M18 18c2 2 6 2 8 0s6 2 8 0"/><circle cx="18" cy="18" r="1.5"/><circle cx="30" cy="30" r="1.5"/></svg>
+          <span class="mt-2 text-xl text-[#232b3b] font-normal font-sans">Art-Curation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vertical Carousel Section (pixel-perfect match to reference) -->
+  <section class="flex justify-center items-center min-h-screen bg-white py-10 px-4 relative overflow-hidden">
+    <!-- Desktop Carousel & Content -->
+    <div class="hidden md:flex w-full max-w-7xl mx-auto gap-8">
+      <!-- Left: Vertical Carousel -->
+      <div class="relative w-1/2 h-[600px] md:h-[750px] flex items-center overflow-hidden">
+        <div class="swiper mySwiper h-full w-full">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide flex items-center justify-center">
+              <img src="images/img1.jpg" alt="Residential" class="object-cover h-full w-full" />
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide flex items-center justify-center">
+              <img src="images/img10.jpg" alt="Commercial" class="object-cover h-full w-full" />
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide flex items-center justify-center h-[800px] bg-white">
+              <img src="images/img10.jpg" alt="Showflat" class="object-contain w-full h-full mx-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Text Content that syncs with slide -->
+      <div class="w-1/2 flex flex-col justify-center h-[600px] md:h-[750px]">
+        <div id="text-content" class="max-w-md mx-0 text-left"></div>
+      </div>
+    </div>
+    <!-- Desktop Pagination on the far right -->
+    <div id="custom-pagination" class="hidden md:flex absolute right-[-80px] top-1/2 -translate-y-1/2 flex-col gap-6 z-10"></div>
+
+    <!-- Mobile: All three images and content stacked -->
+    <div class="flex flex-col md:hidden w-full max-w-md mx-auto gap-10">
+      <!-- Residential Spaces -->
+      <div class="mobile-content-container transition-all duration-800 ease-in-out" data-index="0">
+        <img src="images/img10.jpg" alt="Residential Spaces" class="object-cover w-full h-64 rounded-lg mb-6 transition-transform duration-800 ease-out hover:scale-105" />
+        <div class="px-2 transition-all duration-800 ease-out">
+          <h3 class="mobile-title text-3xl font-serif font-semibold text-[#232b3b] mb-4 tracking-wide transition-all duration-800 ease-out" style="font-family: 'Times New Roman', serif;">Residential Spaces</h3>
+          <p class="mobile-description text-gray-700 text-base leading-7 font-sans transition-all duration-800 ease-out">Transform your home into creating beautiful, functional residential spaces that reflect your unique style and needs. From concept to completion, we'll turn your vision & aspiration into a reality.</p>
+        </div>
+      </div>
+      <!-- Commercial Spaces -->
+      <div class="mobile-content-container transition-all duration-800 ease-in-out" data-index="1">
+        <img src="images/img4.jpg" alt="Commercial Spaces" class="object-contain w-full h-64 mx-auto bg-white mb-6 transition-transform duration-800 ease-out hover:scale-105" />
+        <div class="px-2 transition-all duration-800 ease-out">
+          <h3 class="mobile-title text-3xl font-serif font-semibold text-[#232b3b] mb-4 tracking-wide transition-all duration-800 ease-out" style="font-family: 'Times New Roman', serif;">Commercial Spaces</h3>
+          <p class="mobile-description text-gray-700 text-base leading-7 font-sans transition-all duration-800 ease-out">Our approach blends style and functionality, creating environments that boost productivity and leave a lasting impression. Experience the transformation of your workspace into a realm of elegance and refinement.</p>
+        </div>
+      </div>
+      <!-- Showflats -->
+      <div class="mobile-content-container transition-all duration-800 ease-in-out" data-index="2">
+        <img src="images/img4.jpg" alt="Showflats" class="object-cover w-full h-64 rounded-lg mb-6 transition-transform duration-800 ease-out hover:scale-105" />
+        <div class="px-2 transition-all duration-800 ease-out">
+          <h3 class="mobile-title text-3xl font-serif font-semibold text-[#232b3b] mb-4 tracking-wide transition-all duration-800 ease-out" style="font-family: 'Times New Roman', serif;">Showflats</h3>
+          <p class="mobile-description text-gray-700 text-base leading-7 font-sans transition-all duration-800 ease-out">Explore the epitome of future living with our showflats for this under-construction project. Each space is thoughtfully designed, showcasing premium finishes and exquisite attention to detail. Get a preview of the elegance and sophistication that await in your new home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Swiper & Script for vertical carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const slideTexts = [
+      {
+        title: "Showflats",
+        description: `Explore the epitome of future living with our showflats for this under-construction project. Each space is thoughtfully designed, showcasing premium finishes and exquisite attention to detail. Get a preview of the elegance and sophistication that await in your new home.`
+      },
+      {
+        title: "Residential Spaces",
+        description: `Transform your home into creating beautiful, functional residential spaces that reflect your unique style and needs. From concept to completion, we'll turn your vision & aspiration into a reality.`
+      },
+      {
+        title: "Commercial Spaces",
+        description: `Our approach blends style and functionality, creating environments that boost productivity and leave a lasting impression. Experience the transformation of your workspace into a realm of elegance and refinement.`
+      }
+    ];
+    function updateContent(index) {
+      const text = slideTexts[index];
+      document.getElementById("text-content").innerHTML = `
+        <h3 class="text-5xl font-serif font-semibold text-[#232b3b] mb-6 tracking-wide" style="font-family: 'Times New Roman', serif;">${text.title}</h3>
+        <p class="text-gray-700 text-xl leading-8 font-sans">${text.description}</p>
+      `;
+    }
+    function renderPagination(activeIndex) {
+      const pagination = document.getElementById('custom-pagination');
+      pagination.innerHTML = '';
+      for (let i = 0; i < slideTexts.length; i++) {
+        const btn = document.createElement('button');
+        btn.className = `w-12 h-12 flex items-center justify-center rounded-full border transition-all duration-200 text-xl font-sans ${i === activeIndex ? 'border-2 border-black font-bold text-black' : 'border border-gray-300 text-gray-400 font-normal'} bg-white focus:outline-none`;
+        btn.innerHTML = `<span>${i + 1}</span>`;
+        btn.onclick = () => swiper.slideTo(i);
+        pagination.appendChild(btn);
+      }
+    }
+
+    // Mobile text update function
+    function updateMobileContent(index) {
+      const mobileContainers = document.querySelectorAll('.mobile-content-container');
+      mobileContainers.forEach((container, containerIndex) => {
+        const titleElement = container.querySelector('.mobile-title');
+        const descriptionElement = container.querySelector('.mobile-description');
+        const isActive = containerIndex === index;
+
+        // Apply transition effects
+        if (isActive) {
+          container.style.opacity = '1';
+          container.style.transform = 'translateY(0)';
+          container.style.filter = 'blur(0px)';
+          if (titleElement) titleElement.style.transform = 'scale(1)';
+          if (descriptionElement) descriptionElement.style.transform = 'translateX(0)';
+        } else {
+          container.style.opacity = '0.7';
+          container.style.transform = 'translateY(10px)';
+          container.style.filter = 'blur(1px)';
+          if (titleElement) titleElement.style.transform = 'scale(0.95)';
+          if (descriptionElement) descriptionElement.style.transform = 'translateX(-10px)';
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: {
+          forceToAxis: true,
+          sensitivity: 1,
+          releaseOnEdges: true,
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true,
+        },
+        allowTouchMove: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: true,
+        },
+        effect: "slide",
+        speed: 800,
+        easing: "easeInOutCubic",
+        pagination: {
+          el: "#custom-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className} w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#232b3b] text-[#232b3b] text-xl font-semibold transition-all duration-200">${index + 1}</span>`;
+          },
+        },
+        on: {
+          slideChange: function () {
+            updateContent(this.realIndex);
+            renderPagination(this.realIndex);
+
+            // Add smooth transition effects for mobile
+            if (window.innerWidth < 768) {
+              updateMobileContent(this.realIndex);
+            }
+          },
+          init: function () {
+            // Apply initial transitions
+            const slides = document.querySelectorAll('.swiper-slide');
+            slides.forEach((slide, index) => {
+              slide.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s ease';
+              if (index === 0) {
+                slide.style.transform = 'translateY(0) scale(1)';
+                slide.style.opacity = '1';
+              } else {
+                slide.style.transform = 'translateY(50px) scale(0.95)';
+                slide.style.opacity = '0.5';
+              }
+            });
+
+            // Mobile initial state
+            if (window.innerWidth < 768) {
+              updateMobileContent(0);
+            }
+          },
+        },
+      });
+
+      // Ensure clean slide transitions with whole image visibility
+      swiper.on('slideChangeTransitionStart', function () {
+        const slides = document.querySelectorAll('.swiper-slide');
+        slides.forEach((slide, index) => {
+          if (index === this.activeIndex) {
+            slide.style.transform = 'translateY(0) scale(1)';
+            slide.style.opacity = '1';
+            slide.style.filter = 'blur(0px)';
+            slide.style.zIndex = '1';
+          } else {
+            slide.style.transform = 'translateY(0) scale(1)';
+            slide.style.opacity = '0';
+            slide.style.filter = 'blur(0px)';
+            slide.style.zIndex = '0';
+          }
+        });
+      });
+
+      swiper.on('slideChangeTransitionEnd', function () {
+        const slides = document.querySelectorAll('.swiper-slide');
+        slides.forEach((slide, index) => {
+          if (index === this.activeIndex) {
+            slide.style.transform = 'translateY(0) scale(1)';
+            slide.style.opacity = '1';
+            slide.style.filter = 'blur(0px)';
+            slide.style.zIndex = '1';
+          } else {
+            slide.style.transform = 'translateY(0) scale(1)';
+            slide.style.opacity = '0';
+            slide.style.filter = 'blur(0px)';
+            slide.style.zIndex = '0';
+          }
+        });
+      });
+
+      updateContent(0);
+      renderPagination(0);
+
+      // Enhanced pagination observer
+      const observer = new MutationObserver(() => {
+        document.querySelectorAll('#custom-pagination .swiper-pagination-bullet').forEach(btn => {
+          if (btn.classList.contains('swiper-pagination-bullet-active')) {
+            btn.classList.add('ring-2', 'ring-[#232b3b]', 'font-bold', 'shadow-lg', 'scale-110');
+            btn.classList.remove('text-[#232b3b]');
+          } else {
+            btn.classList.remove('ring-2', 'ring-[#232b3b]', 'font-bold', 'shadow-lg', 'scale-110');
+            btn.classList.add('text-[#232b3b]');
+          }
+        });
+      });
+      observer.observe(document.getElementById('custom-pagination'), { childList: true, subtree: true });
+
+      // Mobile touch gesture improvements
+      if (window.innerWidth < 768) {
+        swiper.params.touchRatio = 1.5;
+        swiper.params.touchAngle = 45;
+        swiper.params.longSwipesRatio = 0.3;
+        swiper.update();
+      }
+    });
+  </script>
+
+  <!-- Stats Section -->
+  <section class="py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-32 h-32 bg-[#A28366] rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-40 h-40 bg-[#A28366] rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-[#A28366] rounded-full blur-2xl"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <!-- Enhanced Header -->
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center w-full mb-6">
+          <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+          <div class="mx-6 px-6 py-2 bg-white rounded-full shadow-lg">
+            <span class="text-3xl font-playfair text-[#232b3b] tracking-wide">Our Journey in Numbers</span>
+          </div>
+          <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+        </div>
+        <p class="text-gray-600 font-montserrat text-lg max-w-2xl mx-auto leading-relaxed">
+          Every number tells a story of trust, creativity, and excellence in interior design
+        </p>
+      </div>
+      
+      <!-- Enhanced Stats Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <!-- Stat 1: Happy Clients -->
+        <div class="group relative">
+          <div class="bg-white rounded-2xl p-8  hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+            <div class="flex flex-col items-center text-center">
+              <!-- Icon -->
+              <div class="w-16 h-16 bg-white border-2 border-[#A28366] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-heart text-[#A28366] text-2xl"></i>
+              </div>
+              <!-- Number -->
+              <div class="mb-4">
+                <span class="text-5xl lg:text-6xl font-bold text-[#A28366] leading-none count-up" data-target="500">0</span>
+                <span class="text-3xl text-[#A28366] font-bold">+</span>
+              </div>
+              <!-- Label -->
+              <div class="text-lg font-semibold text-[#232b3b] mb-2">Happy Clients</div>
+              <div class="text-sm text-gray-500 font-montserrat">Satisfied customers</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stat 2: Years Experience -->
+        <div class="group relative">
+          <div class="bg-white rounded-2xl p-8  hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+            <div class="flex flex-col items-center text-center">
+              <!-- Icon -->
+              <div class="w-16 h-16 bg-white border-2 border-[#A28366] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-award text-[#A28366] text-2xl"></i>
+              </div>
+              <!-- Number -->
+              <div class="mb-4">
+                <span class="text-5xl lg:text-6xl font-bold text-[#A28366] leading-none count-up" data-target="12">0</span>
+                <span class="text-3xl text-[#A28366] font-bold">+</span>
+              </div>
+              <!-- Label -->
+              <div class="text-lg font-semibold text-[#232b3b] mb-2">Years Experience</div>
+              <div class="text-sm text-gray-500 font-montserrat">Industry expertise</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stat 3: Projects Completed -->
+        <div class="group relative">
+          <div class="bg-white rounded-2xl p-8  hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+            <div class="flex flex-col items-center text-center">
+              <!-- Icon -->
+              <div class="w-16 h-16 bg-white border-2 border-[#A28366] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-home text-[#A28366] text-2xl"></i>
+              </div>
+              <!-- Number -->
+              <div class="mb-4">
+                <span class="text-5xl lg:text-6xl font-bold text-[#A28366] leading-none count-up" data-target="250">0</span>
+                <span class="text-3xl text-[#A28366] font-bold">+</span>
+              </div>
+              <!-- Label -->
+              <div class="text-lg font-semibold text-[#232b3b] mb-2">Projects Completed</div>
+              <div class="text-sm text-gray-500 font-montserrat">Successful designs</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stat 4: Team Members -->
+        <div class="group relative">
+          <div class="bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
+            <div class="flex flex-col items-center text-center">
+              <!-- Icon -->
+              <div class="w-16 h-16 bg-white border-2 border-[#A28366] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="fas fa-users text-[#A28366] text-2xl"></i>
+              </div>
+              <!-- Number -->
+              <div class="mb-4">
+                <span class="text-5xl lg:text-6xl font-bold text-[#A28366] leading-none count-up" data-target="15">0</span>
+                <span class="text-3xl text-[#A28366] font-bold">+</span>
+              </div>
+              <!-- Label -->
+              <div class="text-lg font-semibold text-[#232b3b] mb-2">Team Members</div>
+              <div class="text-sm text-gray-500 font-montserrat">Expert professionals</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Call to Action -->
+      <div class="text-center mt-16">
+        <div class="inline-flex items-center space-x-2 bg-[#A28366] text-white px-8 py-4 rounded-full hover:bg-[#8A6B52] transition-colors duration-300 cursor-pointer group">
+          <span class="font-montserrat font-semibold">Start Your Project</span>
+          <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Enhanced count-up animation with intersection observer
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const target = parseInt(counter.getAttribute('data-target'));
+          const duration = 2000; // 2 seconds
+          const steps = 60;
+          const increment = target / steps;
+          let current = 0;
+          let step = 0;
+
+          const updateCounter = () => {
+            step++;
+            current = Math.min(increment * step, target);
+            
+            // Add easing for smoother animation
+            const easeOutQuart = 1 - Math.pow(1 - step / steps, 4);
+            const displayValue = Math.floor(target * easeOutQuart);
+            
+            counter.innerText = displayValue;
+            
+            if (step < steps) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.innerText = target;
+            }
+          };
+
+          updateCounter();
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all counters
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.count-up');
+      counters.forEach(counter => {
+        counterObserver.observe(counter);
+      });
+    });
+  </script>
+
+   <!-- Testimonials Section -->
+   <section class="py-24 bg-gray-50/50">
+    <div class="container mx-auto max-w-7xl px-4">
+      <!-- Enhanced Header -->
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center w-full mb-6">
+          <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+          <div class="mx-6 px-6 py-2 bg-white rounded-full shadow-lg">
+            <span class="text-3xl font-playfair text-[#232b3b] tracking-wide">What Our Clients Say</span>
+          </div>
+          <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+        </div>
+        <p class="text-gray-600 font-montserrat text-lg max-w-2xl mx-auto leading-relaxed">
+          Every testimonial reflects our commitment to excellence and client satisfaction
+        </p>
+      </div>
+      
+      <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="fade-in rounded-2xl bg-white p-8 shadow-soft">
+          <div class="flex space-x-1 mb-4">
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 mb-6">"Komal transformed our home into a masterpiece. Her attention to detail and understanding of our needs was exceptional. We couldn't be happier with the result."</p>
+          <div class="flex items-center space-x-3">
+            <div class="h-10 w-10 rounded-full bg-gray-200"></div>
+            <div>
+              <div class="font-semibold text-gray-900">Priya Sharma</div>
+              <div class="text-sm text-gray-600">Homeowner, Mumbai</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="fade-in rounded-2xl bg-white p-8 shadow-soft">
+          <div class="flex space-x-1 mb-4">
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 mb-6">"Professional, creative, and reliable. Komal delivered our office project on time and within budget. The space has improved our team's productivity significantly."</p>
+          <div class="flex items-center space-x-3">
+            <div class="h-10 w-10 rounded-full bg-gray-200"></div>
+            <div>
+              <div class="font-semibold text-gray-900">Rajesh Patel</div>
+              <div class="text-sm text-gray-600">CEO, Tech Corp</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="fade-in rounded-2xl bg-white p-8 shadow-soft">
+          <div class="flex space-x-1 mb-4">
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+            <i data-lucide="star" class="h-4 w-4 fill-yellow-400 text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 mb-6">"Working with Komal was a dream. She perfectly captured our vision and created a space that truly reflects our personality. Highly recommended!"</p>
+          <div class="flex items-center space-x-3">
+            <div class="h-10 w-10 rounded-full bg-gray-200"></div>
+            <div>
+              <div class="font-semibold text-gray-900">Anita Desai</div>
+              <div class="text-sm text-gray-600">Homeowner, Pune</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- We Are Social Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <!-- Enhanced Header -->
+      <div class="text-center mb-16">
+        <div class="flex items-center justify-center w-full mb-6">
+          <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+          <div class="mx-6 px-6 py-2 bg-white rounded-full shadow-lg">
+            <span class="text-3xl font-playfair text-[#232b3b] tracking-wide">We Are Social</span>
+          </div>
+          <div class="flex-grow border-t-2 border-[#A28366] opacity-30"></div>
+        </div>
+        <p class="text-gray-600 font-montserrat text-lg max-w-2xl mx-auto leading-relaxed">
+          Connect with us on social media to explore our latest projects and design inspirations
+        </p>
+      </div>
+      <!-- Enhanced Social Icons -->
+      <div class="flex flex-row items-center justify-center space-x-8 mb-12">
+        <!-- Instagram -->
+        <div class="group relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#A28366] to-[#8A6B52] rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <a href="https://www.instagram.com/ko_interior_studio/" target="_blank" rel="noopener noreferrer" 
+             class="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#A28366] to-[#8A6B52] hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg hover:shadow-2xl transform">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-xs font-semibold text-gray-600 bg-white px-2 py-1 rounded shadow-lg whitespace-nowrap">Instagram</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Facebook -->
+        <div class="group relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#A28366] to-[#8A6B52] rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <a href="https://www.facebook.com/profile.php?id=100009360076958" target="_blank" rel="noopener noreferrer" 
+             class="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#A28366] to-[#8A6B52] hover:scale-110 hover:-rotate-3 transition-all duration-300 shadow-lg hover:shadow-2xl transform">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+            </svg>
+            <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-xs font-semibold text-gray-600 bg-white px-2 py-1 rounded shadow-lg whitespace-nowrap">Facebook</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="group relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#A28366] to-[#8A6B52] rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <a href="https://www.linkedin.com/company/ko-designstudio/" target="_blank" rel="noopener noreferrer" 
+             class="relative inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#A28366] to-[#8A6B52] hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg hover:shadow-2xl transform">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-1 0-1.7-.8-1.7-1.7s.8-1.7 1.7-1.7 1.7.8 1.7 1.7-.8 1.7-1.7 1.7zm15.5 10.3h-3v-4.5c0-1.1-.4-1.8-1.3-1.8-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.8v4.5h-3v-9h3v1.2c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1v5.2z"/>
+            </svg>
+            <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-xs font-semibold text-gray-600 bg-white px-2 py-1 rounded shadow-lg whitespace-nowrap">LinkedIn</span>
+            </div>
+          </a>
+        </div>
+      </div>
+        <!-- Instagram Feed Grid (placeholder images) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-y-8 gap-x-2">
+          <a href="https://www.instagram.com/ko_interior_studio/">
+            <img src="images/img2.jpg" class="w-full h-64 md:h-72 object-cover rounded" />
+          </a>
+          <a href="https://www.instagram.com/ko_interior_studio/">
+            <img src="images/img6.jpg" class="w-full h-64 md:h-72 object-cover rounded" />
+          </a>
+          <a href="https://www.instagram.com/ko_interior_studio/">
+          <img src="images/img15.jpg" class="w-full h-64 md:h-72 object-cover rounded" />
+          </a>
+          <a href="https://www.instagram.com/ko_interior_studio/">
+          <img src="images/img12.jpg" class="w-full h-64 md:h-72 object-cover rounded" />
+          </a>
+          <a href="https://www.instagram.com/ko_interior_studio/">
+          <img src="images/img9.jpg"  class="w-full h-64 md:h-72 object-cover rounded"/>
+          </a>
+          <a href="https://www.instagram.com/ko_interior_studio/">
+          <img src="images/img7.jpg" class="w-full h-64 md:h-72 object-cover rounded" />
+          </a>
+          <a href="https://www.instagram.com/ko_interior_studio/">
+          <img src="images/img14.jpg" class="w-full h-64 md:h-72 object-cover rounded" />
+          </a>
+          <a href="https://www.instagram.com/ko_interior_studio/">
+          <img src="images/img11.jpg" class="w-full h-64 md:h-72 object-cover rounded" />
+          </a>
+          <a href="https://www.instagram.com/ko_interior_studio/">
+          <img src="images/img8.jpg" class="w-full h-64 md:h-72 object-cover rounded" />
+          </a>
+        </div>
+      </div>
+              <div class="flex justify-center mt-6">
+          <a href="https://www.instagram.com/ko_interior_studio/" target="_blank" class="px-6 py-2 bg-gradient-to-r from-[#A28366] to-[#8A6B52] text-white rounded-lg hover:from-[#8A6B52] hover:to-[#A28366] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">Follow on Instagram</a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <!-- Footer Section -->
+  <footer class="bg-gradient-to-br from-amber-50/40 via-white/30 to-amber-50/40 backdrop-blur-xl border-t border-amber-100/30 py-10 mt-0 relative overflow-hidden">
+    <!-- Multiple frosted glass layers with warm tones -->
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-50/20 via-white/40 to-amber-50/20 backdrop-blur-sm"></div>
+    <div class="absolute inset-0 bg-gradient-to-tl from-amber-100/15 via-transparent to-amber-100/15 backdrop-blur-md"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-amber-50/10 via-transparent to-amber-50/10 backdrop-blur-sm"></div>
+    
+    <!-- Enhanced decorative frost elements with warm accents -->
+    <div class="absolute inset-0 opacity-25">
+      <div class="absolute top-4 left-10 w-24 h-24 bg-gradient-to-br from-[#A28366]/30 to-amber-200/20 rounded-full blur-2xl"></div>
+      <div class="absolute bottom-4 right-10 w-20 h-20 bg-gradient-to-br from-amber-200/25 to-[#A28366]/30 rounded-full blur-xl"></div>
+      <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-to-br from-[#A28366]/20 to-amber-100/30 rounded-full blur-lg"></div>
+      <div class="absolute top-1/4 right-1/4 w-12 h-12 bg-gradient-to-br from-amber-100/25 to-[#A28366]/25 rounded-full blur-md"></div>
+      <div class="absolute bottom-1/3 left-1/5 w-14 h-14 bg-gradient-to-br from-[#A28366]/15 to-amber-200/20 rounded-full blur-xl"></div>
+    </div>
+    
+    <!-- Warm frost texture -->
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23fef3c7" fill-opacity="0.15"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+          <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start px-4 relative z-10">
+      <!-- Left: Logo and Copyright -->
+      <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
+        <div class="flex items-center mb-2">
+          <img src="images/logo.webp" alt="K Logo" class="h-14 w-auto min-w-[32px] mr-3" />
+          <img src="images/logo-extend.png" alt="K Logo" class="h-12 w-auto min-w-[32px]" />
+          <span class="text-white text-6xl font-light leading-none mr-4" style="font-family:serif;"></span>
+        </div>
+        <div class="text-gray-600 text-sm italic mt-4 relative z-10 text-center">Copyright © 2024 ko_interior_studio &amp; Developed with <span class="text-[#A28366]">&#10084;</span> by Nex2Link.</div>
+      </div>
+      <!-- Right: Social Links -->
+      <div class="flex flex-col items-center md:items-end">
+        <div class="text-gray-800 text-2xl font-serif mb-4 relative z-10">Follow Us On</div>
+        <div class="flex space-x-6">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ko_interior_studio/" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-[#A28366] to-[#8A6B52] text-white hover:scale-110 hover:shadow-lg transition-all duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=100009360076958" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-[#A28366] to-[#8A6B52] text-white hover:scale-110 hover:shadow-lg transition-all duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/ko-designstudio/" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-[#A28366] to-[#8A6B52] text-white hover:scale-110 hover:shadow-lg transition-all duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-1 0-1.7-.8-1.7-1.7s.8-1.7 1.7-1.7 1.7.8 1.7 1.7-.8 1.7-1.7 1.7zm15.5 10.3h-3v-4.5c0-1.1-.4-1.8-1.3-1.8-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.8v4.5h-3v-9h3v1.2c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1v5.2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

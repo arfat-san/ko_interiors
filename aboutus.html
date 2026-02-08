@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Principal Designer | KO Interior Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Add Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body class="bg-white m-0 p-0">
+  <!-- Main Navbar -->
+  <header class="bg-white w-full border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-7 py-4 relative">
+      <!-- Logo (left) -->
+      <div class="flex items-center space-x-4">
+        <img src="images/logo.webp" alt="K Logo" class="h-10 w-auto min-w-[40px] md:h-14" />
+        <img src="images/logo-extend.png" alt="KO Interior Studio" class="h-10  w-auto min-w-[10px] md:h-14" />
+      </div>
+      <!-- Desktop Nav (center/right) -->
+      <nav class="hidden md:flex items-center space-x-6 ml-8 flex-1 justify-end font-montserrat">
+        <a href="index.html" class="text-gray-800 font-semibold text-sm tracking-wider hover:text-[#A28366] transition uppercase">HOME</a>
+        <a href="aboutus.html" class="text-gray-800 font-semibold text-sm tracking-wider hover:text-[#A28366] transition uppercase">ABOUT</a>
+        <a href="portfolio.html" class="text-gray-800 font-semibold text-sm tracking-wider hover:text-[#A28366] transition uppercase">PROJECTS</a>
+        <a href="contact.html" class="text-gray-800 font-semibold text-sm tracking-wider hover:text-[#A28366] transition uppercase">CONTACT</a>
+      </nav>
+      <!-- Hamburger Icon for Mobile (right) -->
+      <button id="mobile-menu-button" class="md:hidden flex items-center px-2 py-2 text-[#A28366] focus:outline-none z-20 ml-2">
+        <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="fixed inset-0 bg-white bg-opacity-95 z-30 flex flex-col items-center justify-center space-y-8 text-center transition-all duration-300 opacity-0 pointer-events-none md:hidden font-montserrat">
+        <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-800">
+          <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <a href="index.html" class="text-gray-800 font-semibold text-xl tracking-wider hover:text-[#A28366] transition uppercase">HOME</a>
+        <a href="aboutus.html" class="text-gray-800 font-semibold text-xl tracking-wider hover:text-[#A28366] transition uppercase">ABOUT</a>
+        <a href="portfolio.html" class="text-gray-800 font-semibold text-xl tracking-wider hover:text-[#A28366] transition uppercase">PROJECTS</a>
+        <a href="contact.html" class="text-gray-800 font-semibold text-xl tracking-wider hover:text-[#A28366] transition uppercase">CONTACT</a>
+      </div>
+    </div>
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-mobile-menu');
+        menuBtn.addEventListener('click', () => {
+          menu.classList.remove('opacity-0', 'pointer-events-none');
+          menu.classList.add('opacity-100');
+        });
+        closeBtn.addEventListener('click', () => {
+          menu.classList.add('opacity-0', 'pointer-events-none');
+          menu.classList.remove('opacity-100');
+        });
+      });
+    </script>
+  </header>
+
+    <!-- Main About/Principal Designer Section -->
+    <section class="bg-[#fcfcfa] py-20">
+      <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center md:items-start gap-0">
+        <div class="w-full md:w-1/2 flex-shrink-0 flex justify-center md:justify-end mb-8 md:mb-0">
+                      <img src="images/469637415_18364618537188599_2340832439161105862_n.jpg" alt="KO Interior Studio Principal Designer" class="rounded-lg w-full max-w-[520px] h-auto aspect-[3/4.4] object-cover" />
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-center md:pl-12">
+          <h2 class="text-5xl font-serif font-bold text-[#232b3b] mb-2 tracking-wide">KOMAL THORAT</h2>
+          <h3 class="text-[15px] uppercase tracking-widest text-[#b3a692] font-semibold mb-6" style="letter-spacing:0.15em;">Principal Interior Designer</h3>
+          <div class="text-[18px] text-[#232b3b] leading-8 font-sans">
+            <p class="mb-4">Hi, I'm Komal Thorat, Principal Interior Designer at KO Interior Studio. My journey in design began seven years ago in Mumbai, where I started out as a freelance designer working on small spaces, learning from every project, and slowly building the confidence to shape my own design path.</p>
+            <p class="mb-4">Over the years, I've had the chance to work on both residential and commercial spaces. Every home taught me something about the people living in it, and every commercial project taught me how design can impact the way we work and interact. These experiences helped me understand one thing clearly, good design should feel natural, meaningful, and personal.</p>
+            <p class="mb-4">My style is simple, elegant, and detail-driven. I love creating spaces that are practical yet beautiful, warm yet refined. And above all, I make sure that each space reflects the personality, comfort, and lifestyle of the people who will use it.</p>
+            <p>With KO Interior Studio, my goal is to create spaces that feel like they belong to you, spaces that make you feel at ease, inspire you, and stay with you for years to come.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer Section -->
+  <!-- Footer Section -->
+  <footer class="bg-gradient-to-br from-amber-50/40 via-white/30 to-amber-50/40 backdrop-blur-xl border-t border-amber-100/30 py-10 mt-0 relative overflow-hidden">
+    <!-- Multiple frosted glass layers with warm tones -->
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-50/20 via-white/40 to-amber-50/20 backdrop-blur-sm"></div>
+    <div class="absolute inset-0 bg-gradient-to-tl from-amber-100/15 via-transparent to-amber-100/15 backdrop-blur-md"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-amber-50/10 via-transparent to-amber-50/10 backdrop-blur-sm"></div>
+
+    <!-- Enhanced decorative frost elements with warm accents -->
+    <div class="absolute inset-0 opacity-25">
+      <div class="absolute top-4 left-10 w-24 h-24 bg-gradient-to-br from-[#A28366]/30 to-amber-200/20 rounded-full blur-2xl"></div>
+      <div class="absolute bottom-4 right-10 w-20 h-20 bg-gradient-to-br from-amber-200/25 to-[#A28366]/30 rounded-full blur-xl"></div>
+      <div class="absolute top-1/2 left-1/3 w-16 h-16 bg-gradient-to-br from-[#A28366]/20 to-amber-100/30 rounded-full blur-lg"></div>
+      <div class="absolute top-1/4 right-1/4 w-12 h-12 bg-gradient-to-br from-amber-100/25 to-[#A28366]/25 rounded-full blur-md"></div>
+      <div class="absolute bottom-1/3 left-1/5 w-14 h-14 bg-gradient-to-br from-[#A28366]/15 to-amber-200/20 rounded-full blur-xl"></div>
+    </div>
+
+    <!-- Warm frost texture -->
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23fef3c7" fill-opacity="0.15"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+          <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start px-4 relative z-10">
+      <!-- Left: Logo and Copyright -->
+      <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
+        <div class="flex items-center mb-2">
+          <img src="images/logo.webp" alt="K Logo" class="h-14 w-auto min-w-[32px] mr-3" />
+          <img src="images/logo-extend.png" alt="K Logo" class="h-12 w-auto min-w-[32px]" />
+          <span class="text-white text-6xl font-light leading-none mr-4" style="font-family:serif;"></span>
+        </div>
+        <div class="text-gray-600 text-sm italic mt-4 relative z-10 text-center">Copyright © 2024 ko_interior_studio & Developed with <span class="text-[#A28366]">&#10084;</span> by Nex2Link.</div>
+      </div>
+      <!-- Right: Social Links -->
+      <div class="flex flex-col items-center md:items-end">
+        <div class="text-gray-800 text-2xl font-serif mb-4 relative z-10">Follow Us On</div>
+        <div class="flex space-x-6">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/ko_interior_studio/" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-[#A28366] to-[#8A6B52] text-white hover:scale-110 hover:shadow-lg transition-all duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-xs font-semibold text-gray-600 bg-white px-2 py-1 rounded shadow-lg whitespace-nowrap">Instagram</span>
+            </div>
+          </a>
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=100009360076958" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-[#A28366] to-[#8A6B52] text-white hover:scale-110 hover:shadow-lg transition-all duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+            </svg>
+            <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-xs font-semibold text-gray-600 bg-white px-2 py-1 rounded shadow-lg whitespace-nowrap">Facebook</span>
+            </div>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/company/ko-designstudio/" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-[#A28366] to-[#8A6B52] text-white hover:scale-110 hover:shadow-lg transition-all duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-1 0-1.7-.8-1.7-1.7s.8-1.7 1.7-1.7 1.7.8 1.7 1.7-.8 1.7-1.7 1.7zm15.5 10.3h-3v-4.5c0-1.1-.4-1.8-1.3-1.8-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.8v4.5h-3v-9h3v1.2c.4-.6 1.1-1.5 2.7-1.5 2 0 3.5 1.3 3.5 4.1v5.2z"/>
+            </svg>
+            <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-xs font-semibold text-gray-600 bg-white px-2 py-1 rounded shadow-lg whitespace-nowrap">LinkedIn</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
